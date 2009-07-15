@@ -1,0 +1,15 @@
+;Languages
+&EN
+;
+; UID is the app's UID
+;
+#{"Minimal"},(0x0B6BE65F),1,0,0
+;
+; Supports UIQ v2.0
+(0x101F617B), 2, 0, 0, {"UIQ20ProductID"}
+
+; Fles to install
+;
+"\Symbian\UIQ_21\Epoc32\release\armi\urel\minimal.app"             -"!:\system\apps\minimal\minimal.app"
+"\Symbian\UIQ_21\Epoc32\data\z\system\apps\minimal\minimal.rsc"   -"!:\system\apps\minimal\minimal.rsc"
+"\Symbian\UIQ_21\Epoc32\data\z\system\apps\minimal\minimal.aif"   -"!:\system\apps\minimal\minimal.aif"

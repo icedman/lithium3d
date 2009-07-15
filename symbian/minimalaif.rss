@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PocketHAL
+// Copyright 2004 by Thierry Tremblay
+//
+//////////////////////////////////////////////////////////////////////////////
+
+#include <aiftool.rh>
+
+
+RESOURCE AIF_DATA
+{
+    app_uid		  = 0x0B6BE65F;
+    num_icons	  = 0;
+
+    caption_list=
+    {       
+        CAPTION
+        {
+            code    = ELangEnglish;
+            caption = "Minimal";
+        }
+    };
+}

@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// PocketHAL
+// Copyright 2004 by Thierry Tremblay
+//
+//////////////////////////////////////////////////////////////////////////////
+
+
+MACRO           PHAL_SYMBIAN_UIQ
+
+TARGET		    minimal.app
+TARGETTYPE      app
+UID			    0x100039CE 0x0B6BE65F
+TARGETPATH      \system\apps\minimal
+
+USERINCLUDE     .. ..\..\common ..\..\common\symbian
+SYSTEMINCLUDE   \epoc32\include \epoc32\include\libc ..\..\..
+
+RESOURCE        minimal.rss
+
+SOURCEPATH      ..
+SOURCE	        minimal.cpp
+
+SOURCEPATH      ../../common
+SOURCE	        game.cpp utility.cpp
+
+SOURCEPATH      ../../common/symbian
+SOURCE	        gamebase.cpp
+
+LIBRARY         euser.lib apparc.lib cone.lib eikcore.lib 
+LIBRARY         estlib.lib fbscli.lib bitgdi.lib ws32.lib
+LIBRARY         qikctl.lib hal.lib
+
+STATICLIBRARY   pockethal.lib
+
+AIF minimal.aif . minimalaif.rss

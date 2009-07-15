@@ -1,0 +1,15 @@
+;Languages
+&EN
+;
+; UID is the app's UID
+;
+#{"Minimal"},(0x0B6BE65F),1,0,0
+;
+; Supports Series 60 v0.9
+(0x101F6F88), 0, 0, 0, {"Series60ProductID"}
+
+; Fles to install
+;
+"\Symbian\6.1\Series60\Epoc32\release\armi\urel\minimal.app"         -"!:\system\apps\minimal\minimal.app"
+"\Symbian\6.1\Series60\Epoc32\release\armi\urel\minimal.rsc"         -"!:\system\apps\minimal\minimal.rsc"
+"\Symbian\6.1\Series60\Epoc32\release\armi\urel\minimal.aif"         -"!:\system\apps\minimal\minimal.aif"
