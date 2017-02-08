@@ -3,6 +3,7 @@
 #include "pixel.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void BitmapZero(bitmapfile_t& bitmap)
 {
@@ -19,7 +20,7 @@ int BitmapLoad(bitmapfile_t& bitmap,const TCHAR *filename)
 	int index;
 
 	// open bitmap file
-	filePtr = _tfopen(filename, _T("rb"));
+	filePtr = fopen(filename, _T("rb"));
 	if (filePtr == NULL)
 		return 0;
 
@@ -112,6 +113,6 @@ int BitmapLoad(bitmapfile_t& bitmap,const TCHAR *filename)
 void BitmapFree(bitmapfile_t& bitmap)
 {
 	if (bitmap.buffer) {
-		free(bitmap.buffer);
+		// free(bitmap.buffer);
 	}
 }

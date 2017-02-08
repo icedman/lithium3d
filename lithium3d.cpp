@@ -250,7 +250,7 @@ void glVertex(vector_t& v,int index)
 	#endif
 
 	// cull/clip
-	PolygonClip(gl.polygon,gl.projection);
+	// PolygonClip(gl.polygon,gl.projection);
 
 	// render
 	if (gl.polygon.numVertices>2) {
@@ -293,6 +293,7 @@ void glEnd()
 	rasterizer_t r;
 	r.renderTarget=gl.renderTarget;
 	r.textureSource=gl.textureSource;
+
 	if (gl.renderMode & Z_SORTING) {		
 		RenderBucketRasterize(&r,&gl.renderlist);
 	} else {

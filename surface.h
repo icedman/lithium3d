@@ -2,8 +2,8 @@
 #ifndef _LITH_SURFACE_H_
 #define _LITH_SURFACE_H_
 
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
 
 #include "stdtypes.h"
 #include "framebuffer.h"

@@ -15,7 +15,6 @@ void PaletteInit(palette_t& p)
 
 void PaletteInit(palette_t& p,const TCHAR *filename)
 {
-
 	bitmapfile_t b;
 	if (!BitmapLoad(b,filename)) {
 		return;

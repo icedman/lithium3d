@@ -2,8 +2,8 @@
 #ifndef _LITH_PALETTE_H_
 #define _LITH_PALETTE_H_
 
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
 
 #include "pixel.h"
 

@@ -67,6 +67,8 @@
 
 	u32 c;
 
+	TRACE(left);
+
 	ppixel_t pTarget;
 	#undef GET_TEXEL
 	#ifdef RENDER_8BIT

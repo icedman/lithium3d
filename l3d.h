@@ -11,8 +11,8 @@
 #ifndef INCLUDED_MINIMAL_H
 #define INCLUDED_MINIMAL_H
 
-#include <PocketHAL/PocketHAL.h>
-#include "../common/game.h"
+// #include <PocketHAL/PocketHAL.h>
+// #include "../common/game.h"
 
 #include "lithium3d.h"
 
@@ -25,7 +25,7 @@
 #include "sample.h"
 #include "trace.h"
 
-using namespace PHAL;
+// using namespace PHAL;
 
 
 
@@ -35,7 +35,7 @@ using namespace PHAL;
 //
 //////////////////////////////////////////////////////////////////////////////
 
-class MinimalGame : public Game
+class MinimalGame // : public Game
 {
 public:
 

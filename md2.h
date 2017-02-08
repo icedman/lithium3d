@@ -3,8 +3,8 @@
 
 #include "lithium3d.h"
 
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
 
 #define MAX_FRAMES 512
 

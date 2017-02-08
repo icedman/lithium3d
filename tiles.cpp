@@ -3,6 +3,9 @@
 #include "renderbasic.h"
 #include "trace.h"
 
+inline void SetRect(rect_t *r, int lt, int tp, int rt, int bt)
+{ r->left=lt; r->right=rt; r->top=tp; r->bottom=bt; }
+
 Tiles::Tiles()
 {
 	m_surface=NULL;
@@ -103,6 +106,7 @@ void Tiles::DrawTile(framebuffer_t& buffer, int tx, int ty, int x, int y, double
 			scale=0.5;
 
 		SetRect(&rc,0,0,(int)(m_tileWidth*scale),(int)(m_tileHeight*scale));
+
 	//	Surface *s=buffer->CreateSurface(m_tileWidth*scale,m_tileHeight*scale);
 	//	s->SetColorMask(m_surface->GetColorMask());
 	//	buffer->SetRenderTarget(s);
@@ -120,6 +124,6 @@ void Tiles::DrawTile(framebuffer_t& buffer, int tx, int ty, rect_t rStretch)
 
 	rect_t rc;
 	if (GetRect(tx,ty,rc)) {
-	//	buffer->BlitStretch(rStretch, m_surface, &rc);
+		// buffer->BlitStretch(rStretch, m_surface, &rc);
 	}
 }

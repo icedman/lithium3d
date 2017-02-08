@@ -5,6 +5,8 @@
 
 #include "trace.h"
 
+#include <stdlib.h>
+
 inline void EdgeCalculate(pedge_t e,pvertex_t v1,pvertex_t v2)
 {
 	e->length=(v2->screen.y - v1->screen.y);
@@ -228,6 +230,8 @@ void RenderPolygonLines(pframebuffer_t buffer,ppolygon_t p)
 			RGB_SET(31,63,31));
 	}
 }
+
+#include <stdio.h>
 
 #define RENDER_16BIT
 void RenderPolygon16(pframebuffer_t buffer,ppolygon_t polygon,ptexture_t texture)

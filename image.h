@@ -4,8 +4,41 @@
 
 #include "stdtypes.h"
 
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
+
+typedef struct tagBITMAPFILEHEADER {
+  WORD  bfType;
+  DWORD bfSize;
+  WORD  bfReserved1;
+  WORD  bfReserved2;
+  DWORD bfOffBits;
+} BITMAPFILEHEADER;
+
+typedef BITMAPFILEHEADER* PBITMAPFILEHEADER;
+
+typedef struct tagBITMAPINFOHEADER {
+  DWORD biSize;
+  LONG  biWidth;
+  LONG  biHeight;
+  WORD  biPlanes;
+  WORD  biBitCount;
+  DWORD biCompression;
+  DWORD biSizeImage;
+  LONG  biXPelsPerMeter;
+  LONG  biYPelsPerMeter;
+  DWORD biClrUsed;
+  DWORD biClrImportant;
+} BITMAPINFOHEADER; 
+
+typedef BITMAPINFOHEADER* PBITMAPINFOHEADER;
+
+typedef struct tagPALETTEENTRY {
+  BYTE peRed;
+  BYTE peGreen;
+  BYTE peBlue;
+  BYTE peFlags;
+} PALETTEENTRY;
 
 typedef struct {
 	BITMAPFILEHEADER fileheader;	// this contains the bitmapfile header

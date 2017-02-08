@@ -1,6 +1,6 @@
 #include "md2.h"
-#include <windows.h>
-#include <stdio.h>
+// #include <windows.h>
+// #include <stdio.h>
 
 #include "trace.h"
 
@@ -42,10 +42,10 @@ int CMD2Model::LoadModel(TCHAR *modelFile)
 	int i, j;
 
 	// open the model file
-	filePtr = _tfopen(modelFile, _T("rb"));
+	filePtr = fopen(modelFile, _T("rb"));
 	if (filePtr == NULL)
 		return false;
-     
+
 	// find length of file
 	fseek(filePtr, 0, SEEK_END);
 	fileLen = ftell(filePtr);
@@ -136,7 +136,7 @@ int CMD2Model::LoadModel(TCHAR *modelFile)
 	interpol = 0;
 
 	delete [] buffer;
-   
+
 	return 0;
 }
 
@@ -174,7 +174,7 @@ void CMD2Model::Render()
      
 	vList = interpolList;
 	 
-	glBegin(DRAW_TRIS);
+	glBegin(DRAW_POINTS);
 	for(i = 0; i < numTriangles; i++) {
 		
 		glTextureCoord(st[triIndex[i].stIndex[0]]);
@@ -191,6 +191,7 @@ void CMD2Model::Render()
 
 	}
 	glEnd();
+
 }
 
 void CMD2Model::Update(int delta)

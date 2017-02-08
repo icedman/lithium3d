@@ -5,6 +5,7 @@
 
 void RenderClear(pframebuffer_t buffer,pixel_t color)
 {
+
 	u32 c=(color << 16) | color;
 	pixel_t *pDest=buffer->pixels;
 	int i=buffer->height;

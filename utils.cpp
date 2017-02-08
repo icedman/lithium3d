@@ -3,28 +3,31 @@
 
 size_t FullPathName( LPCTSTR filename, TCHAR pathname[MAX_PATH] )
 {
-    if (filename[0] == '\\')
-    {
-        // Absolute path was specified
-        _tcscpy( pathname, filename );
-        return _tcslen( pathname );
-    }
+//     if (filename[0] == '\\')
+//     {
+//         // Absolute path was specified
+//         _tcscpy( pathname, filename );
+//         return _tcslen( pathname );
+//     }
 
-#if defined(_WIN32_WCE)
+// #if defined(_WIN32_WCE)
 
-    ::GetModuleFileName( 0, pathname, MAX_PATH );
+//     ::GetModuleFileName( 0, pathname, MAX_PATH );
   
-    TCHAR* p = _tcsrchr( pathname, '\\' );
-    if (p == 0) return 0;
+//     TCHAR* p = _tcsrchr( pathname, '\\' );
+//     if (p == 0) return 0;
 
-    _tcscpy( p + 1, filename );
+//     _tcscpy( p + 1, filename );
 
-	return _tcslen( pathname );
+// 	return _tcslen( pathname );
 
-#else
+// #else
 
-    TCHAR* p;
-    return ::GetFullPathName( filename, MAX_PATH, pathname, &p );
+//     TCHAR* p;
+//     return ::GetFullPathName( filename, MAX_PATH, pathname, &p );
 
-#endif
+// #endif
+
+    strcpy(pathname, filename);
+    return strlen(pathname);
 }

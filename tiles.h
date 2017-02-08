@@ -3,8 +3,8 @@
 #define _LITH_TILES_H_
 
 #include "framebuffer.h"
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
 
 class Tiles
 {	

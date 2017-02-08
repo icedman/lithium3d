@@ -2,11 +2,13 @@
 #ifndef _LITH_UTILITY_H_
 #define _LITH_UTILITY_H_
 
-#include <windows.h>
-#include <tchar.h>
+// #include <windows.h>
+// #include <tchar.h>
 
 #include <memory.h>
-#include <malloc.h>
+// #include <malloc.h>
+
+#include <string.h>
 
 #include "stdtypes.h"
 

@@ -2,6 +2,9 @@
 #include "textures.h"
 #include "image.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void TextureInit(texture_t& t)
 {
 	t.palette=NULL;
@@ -72,7 +75,7 @@ void TextureFree(texture_t& t)
 		t.palette=NULL;
 	}
 	if (t.pixels) {
-		delete t.pixels;
+		free(t.pixels);
 		t.pixels=NULL;
 	}
 	t.width=0;
@@ -104,7 +107,7 @@ void TextureCacheFree(texture_cache_t& textures,int id)
 
 	ptexture_t target=textures[id];
 	TextureFree(*target);
-	delete target;
+	free(target);
 
 	textures[id]=NULL;
 }

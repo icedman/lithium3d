@@ -17,12 +17,16 @@ typedef struct {
 			int c30,c31,c32,c33;
 		};
 	};
-} matrix_t, *pmatrix_t;
+} matrix_t;
+
+typedef matrix_t* pmatrix_t;
 
 typedef struct {
 	matrix_t matrices[MAX_MATRIX_STACK];
 	matrix_t *matrix;
-} matrixStack_t, *pmatrixStack_t;
+} matrixStack_t;
+
+typedef matrixStack_t* pmatrixStack_t;
 
 const matrix_t g_identity_matrix = {FPONE,0,0,0, 
                                     0,FPONE,0,0, 

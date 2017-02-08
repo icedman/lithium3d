@@ -1,6 +1,9 @@
 
 #include "surface.h"
 #include "image.h"
+#include "trace.h"
+
+#include <stdlib.h>
 
 void SurfaceInit(surface_t& target,const surface_t& source)
 {
